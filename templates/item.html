@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}商品內容{% endblock title %}
+
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>商品內容</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>商品內容</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id ="item" class="inner-page pt-4">
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="row mb-2">
+                    
+                    <div class="col-md col-lg text-center p-2" >
+                      <img src="{{ url_for('static',filename='img/item_01.jpg') }}" alt="" style="height:30rem;width: 30rem;">
+                    </div>
+                    <div class="col-md col-lg">
+                      <ul class="p-2">
+                          <li style="list-style-type:none"><h3>{{item['productName']}}</h3></li>
+                          <br>
+                          <li style="list-style-type:none" class="bg-light pt-1 pb-2 text-danger"><h3>商品價格 ${{item['productPrice']}}.0</h3></li>
+                          <br>
+                          <li style="list-style-type:none" class="bg-light">商品簡介:{{item['introduction']}}
+                          </li>
+                      </ul>
+                      <ul class="">
+                        <li style="list-style-type:none;float: left;">數量</li>
+                        <li style="list-style-type:none;float: left;">
+                            <button id="num_min" class="bg-success border-0 text-light" style="width: 2rem;height: 2rem;">–</button>
+                        </li>
+                        <li style="list-style-type:none;float: left">
+                            <input id="" type="text" class="text-center" style="width: 3rem;height: 2rem;" value="1">
+                        </li>
+                        <li style="list-style-type:none">
+                            <button id="num_add" class="bg-success border-0 text-light" style="width: 2rem;height: 2rem;">+</button>
+                        </li>
+                      </ul>
+                      <br>
+                      <button class="btn btn-success" name="output"><h5 class="text-white">加入購物車</h5></button>
+                      <button class="btn btn-danger" name="output"><h5 class="text-white">立刻結帳</h5></button>
+                    </div>
+                    
+                  </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+{% endblock content %}

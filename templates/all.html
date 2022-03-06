@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}所有蔬果{% endblock title %}
+
+{% block content %}
+  <main id="main">
+    <!--商品的頁面-->
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>所有蔬果</h2>
+          <ol>
+            <li><a href="/">首頁</a></li>
+            <li>所有蔬果</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    <!--
+    <section class="inner-page pt-4">
+      <div class="container">
+        <p>
+            是否要加到購物車?
+        </p>
+      </div>
+    </section>-->
+
+    <section id="allItem" class="padd-section text-cente inner-page pt-5 ">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title text-center">
+          <!--<h2>所有商品</h2>-->
+          <p class="separator">依照您的喜好挑選商品</p>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          {% for item in item%}
+          <div class="col-md-6 col-lg-3">
+            <div class="shadow p-3 mb-5 bg-white rounded card" >
+              <div class="table">
+                <img src="{{ url_for('static',filename='img/item_01.jpg') }}" alt="" style="height:14rem;width: 14rem;">
+                <h4>{{item['productName']}}</h4>
+                <h2>${{item['productPrice']}}.0</h2>
+                <ul class="list-unstyled">
+                  <!--<li><b>2</b>公斤</li>
+                  <li><b>7/24</b>上架</li>
+                  <li><b>台灣</b>產地</li>
+                  <li>賣家</li>-->
+                  <li>介紹</li>
+                  <li><P id="ellipsis" style="display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;">{{item['introduction']}}</P></li>
+                </ul>
+                <div class="table_btn" class="buynow-btn"><!--因為同時分配給多個按鈕所以要用class-->
+                  <!--<a href="" class="btn btn-success buynow-btn" value="{{item['id']}}"><i class="fa fa-shopping-cart"></i> Buy Now</a>-->
+                  <button type="button" class="buynow-btn btn btn-success buynow-btn" value="{{item['id']}}"><i class="fa fa-shopping-cart">  Buy Now</i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+    <!-- End Pricing Section -->
+  </main><!-- End #main -->
+
+  {% endblock content %}
+
+  {% block script %}
+  <script src="{{ url_for('static',filename='js/all.js')}}"></script>
+  {% endblock script %}
