@@ -1,9 +1,11 @@
 # Fruites&Vegetables Market
 ### 使用框架
 1. Flask網頁框架
-2. 以Python語言撰寫的api
-3. Sqlite小型本地端資料庫
-4. Jinja2實作網頁切版
+2. Html、Javascript、css語言及Jquery組合而成
+3. Bootstrap前端套件
+4. 以Python語言撰寫的api
+5. Sqlite小型本地端資料庫
+6. Jinja2實作網頁切版
 ### 功能
 1. 註冊帳號
 2. 登入會員
