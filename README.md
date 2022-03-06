@@ -12,3 +12,6 @@
 5. 編輯蔬果類商品
 6. 刪除蔬果類商品
 ![image](https://user-images.githubusercontent.com/69799370/156911381-97567497-15c0-42f1-94d2-396606b76361.png)
+### 執行方式
+1. 終端機執行app.py python檔案
+2. 打開本機位址:5000
