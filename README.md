@@ -1,4 +1,6 @@
 # Fruites&Vegetables Market
+## 說明
+使用Flask網頁框架及以Python語言撰寫的api、Sqlite小型本地端資料庫完成擁有CRUD基本功能的練習網站
 ### 使用框架
 1. Flask網頁框架
 2. Html、Javascript、css語言及Jquery組合而成
